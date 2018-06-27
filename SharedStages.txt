@@ -1,0 +1,17 @@
+node{
+    
+    stage('checkout') 
+	{
+    git credentialsId: 'utilityusracc', url: 'https://github.com/sankalprao/Testing-Framework.git'
+    }
+    stage('clean-build') 
+	{
+         bat '''cd C:\\Program Files (x86)\\Jenkins\\workspace\\Sanity Tests
+         git status
+         gradle build'''
+    }
+    stage('upload-artifact') 
+	{
+    bat 'gradle upload'
+    }
+}
