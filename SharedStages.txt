@@ -2,7 +2,7 @@ node{
     
     stage('checkout') 
 	{
-    git credentialsId: 'utilityusracc', url: 'https://github.com/sankalprao/Testing-Framework.git'
+    git credentialsId: 'utilityusracc', url: 'http://github.com/sankalprao/Testing-Framework.git'
     }
     stage('clean-build') 
 	{
